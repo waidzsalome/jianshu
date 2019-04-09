@@ -23,6 +23,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "react-redux": "^7.0.1",
+    "react-transition-group": "^2.9.0",
+    "redux": "^4.0.1",
     "styled-components": "^4.2.0"
   }
 }

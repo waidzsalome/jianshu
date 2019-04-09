@@ -29,19 +29,7 @@ export const Nav = styled.div`
     width: 945px;
     height: 58px;
     margin: 0 auto;
-    .left {
-        float: left;
-    }
-    .right {
-        float: right;
-        color: #969696;
-    }
-    .active{
-        color: #ea6f5a;
-    }
-    ::placeholder{
-        color: #999;
-    }
+    
 `;
 
 export const NavItem = styled.div`
@@ -49,14 +37,26 @@ export const NavItem = styled.div`
     padding: 0 15px;
     font-size: 17px;
     color: #333;
-    .iconfont {
-      font-size: 20px;
+    &.left {
+        float: left;
     }
+    &.right {
+        float: right;
+        color: #969696;
+    }
+    &.active{
+        color: #ea6f5a;
+    }
+    .iconfont {
+        font-size: 25px;
+    }
+    
 `;
 
 export const SearchWrapper = styled.div`
     position: relative;
     float: left;
+    
     .iconfont {
         position: absolute;
         right: 5px;
@@ -65,22 +65,19 @@ export const SearchWrapper = styled.div`
         text-align: center;
         border-radius: 15px;
         bottom: 5px;
+        color: #777;
         &.focused{
           background: #777;
           color: #fff;
         }
-    }
-    .focused {
-        width: 240px;
-        
-    }
+    }   
     
 `;
 
 export const NavSearch = styled.input.attrs({
     placeholder: '搜索'
 })`
-    width: 160px;
+    width: 200px;
     height: 38px;
     padding: 0 30px 0 20px;
     margin-top: 9px;
@@ -92,6 +89,24 @@ export const NavSearch = styled.input.attrs({
     background: #eee;
     color: #666;
     font-size: 14px;
+    &::placeholder{
+        color: #999;
+    }
+    &.focused {
+        width: 280px;       
+    }
+    &.slide-enter {
+        transition: all .2s ease-out;
+    }
+    &.slide-enter-active {
+        width: 280px;        
+    }
+    &.slide-exit {
+       transition: all .2s ease-out;
+    }
+    &.slide-exit-active {
+        width: 200px;
+    }
 `;
 
 export const Addition = styled.div`
@@ -99,18 +114,6 @@ export const Addition = styled.div`
     right: 190px;
     top: 0;
     height: 56px;
-    .reg {
-      color: #ea6f5a;
-    }
-    .writting {
-       color: #fff;
-       background: #ea6f5a;
-       position: relative;
-    }
-    .iconfont {
-        position: absolute;
-        left: 10px;
-    }
 `;
 
 
@@ -122,5 +125,17 @@ export const Button = styled.div`
     line-height: 38px;
     border-radius: 19px;
     border: 1px solid #ec6149;
+    &.reg {
+      color: #ea6f5a;
+    }
+    &.writting {
+       color: #fff;
+       background: #ea6f5a;
+       position: relative;       
+    }
+    .iconfont {
+        position: absolute;
+        left: 10px;
+        font-size: 20px;
+    }
 `;
-
