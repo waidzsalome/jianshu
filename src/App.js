@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
+import { BrowserHistory, Route } from "react-router-dom";
 import Header from './common/header/index'
 import store from './store/index'
 import { GlobalStyle} from "./style";
@@ -13,6 +14,9 @@ class App extends Component {
         <IconStyle/>
         <Provider store={store}>
             <Header/>
+            <BrowserHistory>
+                <Route path='/' />
+            </BrowserHistory>
         </Provider>
       </div>
     );
